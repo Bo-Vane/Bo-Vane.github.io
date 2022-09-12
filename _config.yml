@@ -3,18 +3,18 @@
 #
 
 # Name of your site (displayed in the header)
-name: "lemon's blog"
+name: "Bo's blog"
 # Short bio or description (displayed in the header)
-description: "个人技术公众号：程序员柠檬  分享编程资源 | 学习路线"
+description: "春秋只转载要事"
 
 #
 # Flags below are optional
 #
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: https://github.com/lemonchann/images/raw/master/gzh/%E6%96%87%E6%9C%AB%E6%8E%A8%E5%B9%BF%E6%96%87%E6%A1%88.png
+avatar: https://image.baidu.com/search/detail?ct=503316480&z=&tn=baiduimagedetail&ipn=d&word=%E6%BB%91%E7%A8%BD%E5%A4%B4%E5%83%8F&step_word=&ie=utf-8&in=&cl=2&lm=-1&st=-1&hd=&latest=&copyright=&cs=687715098,3688820589&os=1311361680,2895059233&simid=3234967045,3970018753&pn=191&rn=1&di=7117150749552803841&ln=1400&fr=&fmq=1662957930985_R&ic=&s=undefined&se=&sme=&tab=0&width=&height=&face=undefined&is=0,0&istype=2&ist=&jit=&bdtype=0&spn=0&pi=0&gsm=96&objurl=https%3A%2F%2Fgimg2.baidu.com%2Fimage_search%2Fsrc%3Dhttp%253A%252F%252Fwww.rsdown.cn%252Fd%252Ffile%252Fp%252F2017-05-08%252F895373bc816cfa6f98ed9ad910e2a228.jpg%26refer%3Dhttp%253A%252F%252Fwww.rsdown.cn%26app%3D2002%26size%3Df9999%2C10000%26q%3Da80%26n%3D0%26g%3D0n%26fmt%3Dauto%3Fsec%3D1665549956%26t%3Dd812906bdafddef91f25ef16a1bca121&rpstart=0&rpnum=0&adpicid=0&nojc=undefined&dyTabStr=MCwzLDYsMSwyLDQsNSw4LDcsOQ%3D%3D
 # 你的favicon（出现在浏览器tab上）图片URL，建议使用较小(64px × 64px)的图片
-favicon: https://github.com/lemonchann/lemonchann.github.io/raw/master/images/favicon.ico
+favicon:
 
 # Tabs in header. There are 'Blog', 'About', 'Archive', 'Tags'
 # and URL Link(e.g. 'Theme' tab below) tabs. If you don't need one, just delete
@@ -24,8 +24,6 @@ navigation:
     url: /
   - name: 关于
     url: /about
-  - name: 归档
-    url: /archive
   - name: 标签
     url: /tags
 
@@ -39,11 +37,11 @@ footer-links:
   #weibo: frommidworld #请输入你的微博个性域名 https://www.weibo.com/<thispart>
   behance: # https://www.behance.net/<username>
   dribbble:
-  zhihu: ning-meng-cheng-31-94
-  email: llong87@163.com
+  zhihu: https://www.zhihu.com/people/yu-ke-50-72-13
+  email: 884851491@qq.com
   facebook:
   flickr:
-  github: lemonchann 
+  github: Bo-Vane 
   googleplus: # anything in your profile username that comes after plus.google.com/
   instagram:
   linkedin:
@@ -55,7 +53,7 @@ footer-links:
   youtube:
 
 # Text under the icons in footer
-footer-text: Copyright (c) 2019 lemon
+footer-text: Copyright (c) 2022 Bo
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts
 # You can find your shortname on the Settings page of your Disqus account
