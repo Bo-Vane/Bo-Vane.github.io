@@ -245,7 +245,7 @@ public class Mytest {
 
 **记得加上@SpringBootTest注解！**
 
-删除之后我们发现表中的第一条数据还在，但是deleted变成了1！
+删除之后我们发现表中的第一条数据还在，但是deleted变成了1！**逻辑删除本质上走的是update而不是delete！**
 
 那我们还能否查询到第一条数据呢？
 
@@ -268,3 +268,45 @@ null
 明显是不行，因为以上的CRUD及其扩展操作都会在sql中加入where deleted=0
 
 这个时候想要恢复数据，就去数据库将deleted改为0就ok
+
+    
+那么如何实现数据库中将deleted改为零呢？
+我们知道，逻辑删除一旦使用，使用mybatis-plus为我们写的sql时，被逻辑删除的数据是不参与的（sql语句后都会加上where deleted=0）。所以这个时候我们需要自定义sql语句，**也就是说我们要使用mapper.xml或者注解**
+在mp框架条件下，我们要使用xml文件，这个如同在Mybatis中写sql语句一样。但是由于Mybatis Plus进行了封装所以使用起来的配置稍微有所不同，一不小心容易踩坑。
+首先要在pom.xml配置资源导入问题的相关resources插件
+然后写xml文件：
+
+```xml
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.bo.mapper.UserMapper">
+    <update id="recover" parameterType="String">
+        update mybatis_plus.user set deleted=0  where name=#{name}
+    </update>
+</mapper>mapper>
+```
+
+注意方法名和接口名别写错。
+
+然后在service层和controller做相应的操作即可，但我第一次测试时，发生了not found：
+
+```
+Invalid bound statement (not found): com.bo.mapper.UserMapper.recover
+```
+
+查看target文件夹，资源导出没问题。
+
+经检查xml文件也没问题。查资料发现，我们还需要配置application配置文件！在application.properties中加入：
+
+```properties
+# use xml need:
+mybatis-plus.mapper-locations=classpath*:/com/bo/mapper/xml/*.xml
+```
+
+再次测试，成功恢复数据！
+
+![image-20220923163436913](https://raw.sevencdn.com/Bo-Vane/picgo/main/img/202209231634874.png)
