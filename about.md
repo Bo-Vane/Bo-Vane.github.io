@@ -7,7 +7,7 @@ permalink: /about/
 ## 关于我
 你好，我是Bo。目前是本科学生。这个博客记录了我的一些技术学习过程，可能也会有一些对人生，世界的感受，但只是记录，仅此而已。
 
-github主页：https://github.com/Bo-Vane
+
 
 ## 声明
 
